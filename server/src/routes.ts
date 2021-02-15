@@ -17,4 +17,4 @@ class AppRouter {
   }
 }
 
-export = new AppRouter().router;
+export default new AppRouter().router;
