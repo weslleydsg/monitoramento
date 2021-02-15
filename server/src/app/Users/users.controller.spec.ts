@@ -1,7 +1,7 @@
-import UsersController from './users.controller';
+import usersController from './users.controller';
 
 describe('UsersController', () => {
   it('should have index property', () => {
-    expect(UsersController).toHaveProperty('index');
+    expect(usersController).toHaveProperty('index');
   });
 });

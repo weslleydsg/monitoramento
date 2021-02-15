@@ -6,6 +6,11 @@ class UsersService {
     const { data } = await api.get<User[]>('/users');
     return data;
   }
+
+  async getUserById(id: number) {
+    const { data } = await api.get<User>(`/users/${id}`);
+    return data;
+  }
 }
 
 export default new UsersService();

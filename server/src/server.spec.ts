@@ -15,4 +15,13 @@ describe('Server', () => {
       expect(body).toBeInstanceOf(Array);
     });
   });
+
+  describe('Posts', () => {
+    it('path "/" should return an array', async () => {
+      const { body } = await api.get('/api/posts');
+
+      expect(body).toBeDefined();
+      expect(body).toBeInstanceOf(Array);
+    });
+  });
 });

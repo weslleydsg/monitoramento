@@ -1,15 +1,15 @@
-import UsersRouter from './users.router';
+import usersRouter from './users.router';
 
 describe('UsersRouter', () => {
   it('UsersRouter should have router property', () => {
-    expect(UsersRouter).toHaveProperty('router');
+    expect(usersRouter).toHaveProperty('router');
   });
 
   it('UsersRouter should have path property', () => {
-    expect(UsersRouter).toHaveProperty('path');
+    expect(usersRouter).toHaveProperty('path');
   });
 
   it('UsersRouter path should be /users', () => {
-    expect(UsersRouter.path).toBe('/users');
+    expect(usersRouter.path).toBe('/users');
   });
 });
