@@ -25,6 +25,16 @@ class PostsRouter {
         next(error);
       }
     });
+    this._router.get('/:userId', async (req, res, next) => {
+      try {
+        const result = await this._controller.userPosts(
+          Number(req.params.userId),
+        );
+        res.status(200).json(result);
+      } catch (error) {
+        next(error);
+      }
+    });
   }
 }
 

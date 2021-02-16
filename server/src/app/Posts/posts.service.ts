@@ -28,6 +28,11 @@ class PostsService {
         return fulfilledResult.value;
       });
   }
+
+  async getAllUserPosts(id: number) {
+    const posts = await this.getAllPosts();
+    return posts.filter(value => value.user.id === id);
+  }
 }
 
 export default new PostsService();
