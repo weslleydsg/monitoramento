@@ -1,4 +1,5 @@
 import express, { NextFunction, Request, Response } from 'express';
+import cors from 'cors';
 import appRouter from './routes';
 import ErrorHandler from './models/ErrorHandler';
 
@@ -9,6 +10,8 @@ class Server {
 }
 
 const server = new Server();
+
+server.app.use(cors());
 
 server.app.use('/api', server.router);
 
